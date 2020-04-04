@@ -1,0 +1,13 @@
+name = "HRV"
+uuid = "0047d930-76bf-11ea-1377-bb3cda807e9f"
+authors = ["Jasmin Walter <jasmin.walter@mni.thm.de>"]
+version = "0.1.0"
+
+[compat]
+julia = "1"
+
+[extras]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[targets]
+test = ["Test"]
