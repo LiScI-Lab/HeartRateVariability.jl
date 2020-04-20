@@ -20,6 +20,11 @@ function time_domain(n::Array,s::Array)
 end
 
 function infile(file::String)
-    return Input.read_wfdb(file,"ecg")
+    return Input.read_txt(file)
 end
+
+function infile(record::String,annotator::String)
+    return Input.read_wfdb(record,annotator)
+end
+
 end # module
