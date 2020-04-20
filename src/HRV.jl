@@ -1,6 +1,7 @@
 module HRV
 
 include("TimeDomain.jl")
+include("Input.jl")
 
 function time_domain(n::Array,s::String="all")
     diff=TimeDomain.nn_diff(n)
@@ -18,4 +19,7 @@ function time_domain(n::Array,s::Array)
     print("test")
 end
 
+function infile(file::String)
+    return Input.read_wfdb(file,"ecg")
+end
 end # module

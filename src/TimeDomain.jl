@@ -27,7 +27,7 @@ module TimeDomain
     end
 
     function pnn(diff,x)
-        return nn(diff,x)/length(diff)
+        return nn(diff,x)/(length(diff)+1)*100
     end
 
     function nn(diff,x)
