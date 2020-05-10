@@ -2,6 +2,20 @@ module HRV
 
 include("TimeDomain.jl")
 include("Input.jl")
+include("Frequency.jl")
+
+function frequency(n::Array{Float64,1})
+    ls=Frequency.lomb_scargle(n)
+    vlf=Frequency.get_power(ls.freq,ls.power,0.003,0.04)
+    lf=Frequency.get_power(ls.freq,ls.power,0.04,0.15)
+    hf=Frequency.get_power(ls.freq,ls.power,0.15,0.4)
+    tp=vlf+lf+hf
+    println("VLF: ",vlf)
+    println("LF: ",lf)
+    println("HF: ",hf)
+    println("Total Power: ",tp)
+end
+
 
 function time_domain(n::Array,s::String="all")
     diff=TimeDomain.nn_diff(n)
