@@ -3,11 +3,18 @@ module Frequency
 using LombScargle
 using Trapz
 
-function lomb_scargle(a::Array{Float64,1})
-    t=cumsum(a).-a[1]
-    plan=LombScargle.plan(t,a,minimum_frequency=0.03,maximum_frequency=0.4)
+#=
+This function calculates a lomb scargle transformation
+:param n: is the array that contains the NN-inetrvals
+:return: the result of the lomb scargle transformation
+=#
+function lomb_scargle(n::Array{Float64,1})
+    t=cumsum(n).-n[1]
+    t=t./1000
+    plan=LombScargle.plan(t,n,normalization=:psd,minimum_frequency=0.003,maximum_frequency=0.4)
     return lombscargle(plan)
-end
+end # lomb_scargle
+
 
 function get_power(freq,power,min,max)
     count=1
@@ -20,5 +27,6 @@ function get_power(freq,power,min,max)
     end
     p=trapz(freq[index[1]:index[end]],power[index[1]:index[end]])
     return p
-end
-end
+end # get_power
+
+end # module
