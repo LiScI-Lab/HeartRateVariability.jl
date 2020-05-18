@@ -20,7 +20,7 @@ function get_power(freq,power,min,max)
     count=1
     index=[]
     for f in freq
-        if f>=min && f<=max
+        if f>=min && f<max
             push!(index,count)
         end
         count+=1

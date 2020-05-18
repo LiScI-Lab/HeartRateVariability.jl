@@ -1,5 +1,7 @@
 module Nonlinear
 
+using StatsBase
+
 function apen(n,m,r)
     c1=get_apen_dist(n,m,r)
     c2=get_apen_dist(n,m+1,r)
@@ -60,5 +62,9 @@ function get_sampen_dist(n,m,r,l)
     end
     return sum(counts)
 end
+
+function renyi(n,a)
+    return renyientropy(n,a)
+end # renyi
 
 end

@@ -14,6 +14,9 @@ This function calculates the nonlinear analysis methods and prints the results
 function nonlinear(n::Array{Float64,1},m::Int64=2,r::Number=6)
     println("ApEn: ",Nonlinear.apen(n,m,r))
     println("SampEn: ",Nonlinear.sampen(n,m,r))
+    println("Renyi 0: ",Nonlinear.renyi(n,0))
+    println("Renyi 1: ",Nonlinear.renyi(n,1))
+    println("Renyi 2: ",Nonlinear.renyi(n,2))
 end # nonlinear
 
 #=
@@ -29,6 +32,7 @@ function frequency(n::Array{Float64,1})
     println("VLF: ",vlf)
     println("LF: ",lf)
     println("HF: ",hf)
+    println("LF/HF: ",lf/hf)
     println("Total Power: ",tp)
 end # frequency
 
