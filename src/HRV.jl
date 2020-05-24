@@ -16,6 +16,7 @@ Arguments:
 function nonlinear(n::Array{Float64,1},m::Int64=2,r::Number=6)
     println("ApEn: ",Nonlinear.apen(n,m,r))
     println("SampEn: ",Nonlinear.sampen(n,m,r))
+    println("Hurst-Exponent: ",Nonlinear.hurst(n))
     println("Renyi 0: ",Nonlinear.renyi(n,0))
     println("Renyi 1: ",Nonlinear.renyi(n,1))
     println("Renyi 2: ",Nonlinear.renyi(n,2))
