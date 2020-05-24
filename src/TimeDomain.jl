@@ -1,6 +1,6 @@
 module TimeDomain
 
-using Statistics
+import Statistics
 
 #=
 This function calculates the differences between the NN intervals
@@ -23,7 +23,7 @@ This function calculates the standard deviation of the NN intervals
 :return: the standard deviation
 =#
 function sdnn(n::Array{Float64,1})
-    return std(n)
+    return Statistics.std(n)
 end # sdnn
 
 #=
@@ -32,7 +32,7 @@ This function calculates the root mean square of successive differences
 :return: the rmssd
 =#
 function rmssd(diff::Array{Any,1})
-    return sqrt(mean(diff.^2))
+    return sqrt(Statistics.mean(diff.^2))
 end # rmssd
 
 #=
@@ -41,7 +41,7 @@ This function calculates the standard deviation of successive differences
 :return: the sdsd
 =#
 function sdsd(diff::Array{Any,1})
-    return std(diff)
+    return Statistics.std(diff)
 end # sdsd
 
 #=
@@ -78,7 +78,7 @@ This function calculates the mean of the NN intervals
 :return: the mean value
 =#
 function mean_nn(n::Array{Float64,1})
-    return mean(n)
+    return Statistics.mean(n)
 end # mean_nn
 
 end # module
