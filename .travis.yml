@@ -1,4 +1,5 @@
 language: julia
+codecov: true
 
 jobs:
   include:
