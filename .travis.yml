@@ -4,9 +4,6 @@ julia:
 
 codecov: true
 
-script:
-  - julia -e 'Pkg.clone(pwd()); Pkg.build("HRV.jl"); Pkg.test("HRV.jl"; coverage=true)';
-
 after_success:
   - julia -e 'using Pkg; Pkg.add("Coverage"); using Coverage; Codecov.submit(Codecov.process_folder())';
 
