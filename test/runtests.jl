@@ -9,7 +9,7 @@ td=HRV.time_domain(n)
 @testset "HRV.jl" begin
 
     @testset "HRV.infile" begin
-        @test HRV.infile("e1304","atr")==HRV.infile("e1304.txt")
+        @test HRV.infile("e1304","atr")==HRV.infile("test/e1304.txt")
     end
 
     @testset "HRV.time_domain" begin
