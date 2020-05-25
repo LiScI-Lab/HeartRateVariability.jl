@@ -45,14 +45,10 @@ This function calculates the time domain analysis methods and prints the results
 """
 function time_domain(n::Array{Float64,1})
     diff=TimeDomain.nn_diff(n)
-    println("Mean: ",TimeDomain.mean_nn(n))
-    println("SDNN: ",TimeDomain.sdnn(n))
-    println("RMSSD: ",TimeDomain.rmssd(diff))
-    println("SDSD: ",TimeDomain.sdsd(diff))
-    println("NN50: ",TimeDomain.nn(diff,50))
-    println("pNN50: ",TimeDomain.pnn(diff,50))
-    println("NN20: ",TimeDomain.nn(diff,20))
-    println("pNN20: ",TimeDomain.pnn(diff,20))
+    return (mean=TimeDomain.mean_nn(n),sdnn=TimeDomain.sdnn(n),
+            rmssd=TimeDomain.rmssd(diff), sdsd=TimeDomain.sdsd(diff),
+            nn50=TimeDomain.nn(diff,50), pnn50=TimeDomain.pnn(diff,50),
+            nn20=TimeDomain.nn(diff,20), pnn20=TimeDomain.pnn(diff,20))
 end # time_domain
 
 """
