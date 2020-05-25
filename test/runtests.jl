@@ -1,7 +1,7 @@
 using HRV
 using Test
 
-n=HRV.infile("e1304.txt")
+n=HRV.infile("test/e1304.txt")
 td=HRV.time_domain(n)
 #fd=HRV.frequency(n)
 #nl=HRV.nonlinear(n)
