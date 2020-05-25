@@ -11,4 +11,4 @@ jobs:
                                                Pkg.instantiate()'
         - julia --project=docs/ docs/make.jl
       after_success:
-          - julia -e 'cd(Pkg.dir("HRV")); Pkg.add("Coverage"); using Coverage; Codecov.submit(process_folder())'
+          - julia -e 'using Pkg; cd(Pkg.dir("HRV")); Pkg.add("Coverage"); using Coverage; Codecov.submit(process_folder())'
