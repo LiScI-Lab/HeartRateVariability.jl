@@ -8,10 +8,10 @@ td=HRV.time_domain(n)
 
 @testset "HRV.jl" begin
 
-    @testset "HRV.infile" begin
-        @test HRV.infile("e1304","atr")==n
-    end
-    
+    #@testset "HRV.infile" begin
+    #    @test HRV.infile("e1304","atr")==n
+    #end
+
     @testset "HRV.time_domain" begin
         @test td.mean≈917.24 atol=0.1
         @test td.sdnn≈137.19 atol=0.1
