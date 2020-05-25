@@ -1,16 +1,17 @@
 using HRV
 using Test
 
-n=HRV.infile("test/e1304.txt")
+n=HRV.infile("e1304.txt")
 td=HRV.time_domain(n)
 #fd=HRV.frequency(n)
 #nl=HRV.nonlinear(n)
 
 @testset "HRV.jl" begin
 
-    #@testset "HRV.infile" begin
-    #    @test HRV.infile("test/e1304","atr")==n
-
+    @testset "HRV.infile" begin
+        @test HRV.infile("e1304","atr")==n
+    end
+    
     @testset "HRV.time_domain" begin
         @test td.mean≈917.24 atol=0.1
         @test td.sdnn≈137.19 atol=0.1
