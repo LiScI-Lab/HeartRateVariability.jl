@@ -2,6 +2,9 @@ language: julia
 julia:
   - 1
 
+codecov: true
+coveralls: true
+
 jobs:
   include:
     - stage: "Documentation"
@@ -10,9 +13,6 @@ jobs:
       script:
         - julia --project=docs/ -e 'using Pkg; Pkg.develop(PackageSpec(path=pwd()));
                                                Pkg.instantiate()'
-        - julia --project --check-bounds=yes -e 'import Pkg; Pkg.build(); Pkg.test("HRV.jl"; coverage=true)'
-
-      after_success:
-        - julia --project -e 'import Pkg; Pkg.add("Coverage");'
-        - julia --project -e 'import Pkg; Pkg.add("Documenter"); Pkg.add("DocumenterTools");'
+        - julia --project=test/ test/runtests.jl
         - julia --project=docs/ docs/make.jl
+      after_success: skip
