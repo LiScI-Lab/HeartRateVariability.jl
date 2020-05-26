@@ -7,6 +7,10 @@ jobs:
       julia: 1.3
       os: linux
       before_install:
+        - gcc --version
+        - curl-config --version
+        - ls /usr/include/expat.h
+
         - wget http://physionet.org/physiotools/wfdb.tar.gz
         - tar -xvzf wfdb.tar.gz
         - cd wfdb-10.6.2
