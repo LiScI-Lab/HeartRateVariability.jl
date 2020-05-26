@@ -10,7 +10,8 @@ jobs:
         - wget http://physionet.org/physiotools/wfdb.tar.gz
         - tar -xvzf wfdb.tar.gz
         - cd wfdb-10.6.2
-        - ./configure /wfbd
+        - ./configure --prefix=/wfbd
+        - make
         - make install
         - julia --project=docs/ -e 'using Pkg; Pkg.develop(PackageSpec(path=pwd()));
                                                Pkg.instantiate()'
