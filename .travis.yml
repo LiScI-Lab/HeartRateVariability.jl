@@ -12,6 +12,8 @@ jobs:
         - cd wfdb-10.6.2
         - ./configure
         - sudo make install
+        - make check
+        -cd ../
       script:
         - julia --project=docs/ -e 'using Pkg; Pkg.develop(PackageSpec(path=pwd()));
                                                Pkg.instantiate()'
