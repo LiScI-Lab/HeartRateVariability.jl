@@ -7,7 +7,11 @@ jobs:
       julia: 1.3
       os: linux
       before_install:
-        - ann2rr -h
+        - wget http://physionet.org/physiotools/wfdb.tar.gz
+        - tar -xvzf wfdb.tar.gz
+        - cd wfdb-10.6.2
+        - ./configure
+        - sudo make install
       script:
         - julia --project=docs/ -e 'using Pkg; Pkg.develop(PackageSpec(path=pwd()));
                                                Pkg.instantiate()'
