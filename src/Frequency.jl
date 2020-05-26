@@ -8,7 +8,7 @@ This function calculates a lomb scargle transformation
 :param n: is the array that contains the NN-inetrvals
 :return: the result of the lomb scargle transformation
 =#
-function lomb_scargle(n::Array{Float64,1})
+function lomb_scargle(n)
     t=cumsum(n).-n[1]
     t=t./1000
     plan=LombScargle.plan(t,n,normalization=:psd,minimum_frequency=0.003,maximum_frequency=0.4)
