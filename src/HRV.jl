@@ -6,7 +6,9 @@ include("Frequency.jl")
 include("Nonlinear.jl")
 
 """
-This function calculates the nonlinear analysis methods and prints the results
+    nonlinear(n,m=2,r=6)
+
+This function calculates the nonlinear analysis methods and returns the results.
 
 Arguments:
 - n : is the array that contains the NN-inetrvals
@@ -20,8 +22,12 @@ function nonlinear(n::Array{Float64,1},m::Int64=2,r::Number=6)
 end # nonlinear
 
 """
-This function calculates the frequency analysis methods and prints the results
-:param n: is the array that contains the NN-inetrvals
+    frequency(n)
+
+This function calculates the frequency analysis methods and returns the results.
+
+Arguments:
+- n : is the array that contains the NN-inetrvals
 """
 function frequency(n::Array{Float64,1})
     ls=Frequency.lomb_scargle(n)
@@ -33,8 +39,12 @@ function frequency(n::Array{Float64,1})
 end # frequency
 
 """
-This function calculates the time domain analysis methods and prints the results
-:param n: is the array that contains the NN-inetrvals
+    time_domain(n)
+
+This function calculates the time domain analysis methods and returns the results.
+
+Arguments:
+- n : is the array that contains the NN-inetrvals
 """
 function time_domain(n::Array{Float64,1})
     diff=TimeDomain.nn_diff(n)
@@ -45,19 +55,26 @@ function time_domain(n::Array{Float64,1})
 end # time_domain
 
 """
-This function reads a file (txt or csv) and saves the data in an array
-:param file: is the location of the input file
-:return: an array containing the NN intervals
+    infile(file)
+
+This function reads a file (txt or csv) and saves the data in an array.
+
+Arguments:
+- file : is the path of the input file
+
 """
 function infile(file::String)
     return Input.read_txt(file)
 end # infile
 
 """
-This function reads a wfdb file and saves the data in an array
-:param record: is the name of the record
-:param annotator: is the annotator of the record
-:return: an array containing the NN intervals
+    infile(record,annotator)
+
+This function reads a wfdb file and saves the data in an array.
+
+Arguments:
+- record : is the name of the record
+- annotator : is the annotator of the record
 """
 function infile(record::String,annotator::String)
     return Input.read_wfdb(record,annotator)
