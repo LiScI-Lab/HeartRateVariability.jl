@@ -38,5 +38,8 @@ nl=HRV.nonlinear(n)
         @test nl.renyi0≈-6.82 atol=0.1
         @test nl.renyi1≈-6.83 atol=0.1
         @test nl.renyi2≈-6.84 atol=0.1
+
+        #testing if get_rs from module Nonlinear returns 0 when S or R is 0
+        @test HRV.Nonlinear.get_rs(ones(100))==0 
     end
 end
