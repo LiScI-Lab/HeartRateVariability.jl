@@ -1,9 +1,6 @@
 using Documenter, HRV
 
-makedocs(modules=[HRV],
-         clean = false,
-         format = :html,
-         sitename = "HRV.jl",
+makedocs(sitename = "HRV.jl",
          authors = "Jasmin Walter",
          pages = [
                   #"Introduction" => "index.md",
