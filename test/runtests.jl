@@ -18,9 +18,10 @@ nl=HRV.nonlinear(n)
         @test td.rmssd≈27.85 atol=0.1
         @test td.sdsd≈20.35 atol=0.1
         @test td.nn50≈342 atol=1
-        @test td.pnn50≈4.413472706155633 atol=0.1
+        @test td.pnn50≈4.41 atol=0.1
         @test td.nn20≈2831 atol=1
-        @test td.pnn20≈36.53374628984385 atol=0.1
+        @test td.pnn20≈36.53 atol=0.1
+        @test td.rRR≈2.67 atol=0.1
     end
 
     @testset "HRV.frequency" begin
@@ -40,6 +41,6 @@ nl=HRV.nonlinear(n)
         @test nl.renyi2≈-6.84 atol=0.1
 
         #testing if get_rs from module Nonlinear returns 0 when S or R is 0
-        @test HRV.Nonlinear.get_rs(ones(100))==0 
+        @test HRV.Nonlinear.get_rs(ones(100))==0
     end
 end
