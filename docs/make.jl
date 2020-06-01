@@ -3,7 +3,7 @@ using Documenter, HRV
 makedocs(sitename = "HRV.jl",
          authors = "Jasmin Walter",
          pages = [
-                  #"Introduction" => "index.md",
+                  "Introduction" => "introduction.md",
                   #"Tutorials" => Any[
                   #          "Quick Start" => "tutorials/firstTutorial.md"
                   #                   ],
