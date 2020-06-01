@@ -8,12 +8,16 @@ include("Nonlinear.jl")
 """
     nonlinear(n,m=2,r=6)
 
-This function calculates the nonlinear analysis methods and returns the results.
-
 Arguments:
-- n : is the array that contains the NN-inetrvals
-- m : is the embedding dimension, default=2
-- r : is the tolerance, default=6
+- n: the array that contains the NN-inetrvals
+- m: the embedding dimension, default=2
+- r: the tolerance, default=6
+
+Results:
+- apen: the approximate entropy
+- sampen: the sample entropy
+- hurst: the hurst exponent
+- renyi0, renyi1, renyi2: the Rényi entropy of order 0,1 and 2
 """
 function nonlinear(n::Array{Float64,1},m::Int64=2,r::Number=6)
     return (apen=Nonlinear.apen(n,m,r), sampen=Nonlinear.sampen(n,m,r),
@@ -24,10 +28,15 @@ end # nonlinear
 """
     frequency(n)
 
-This function calculates the frequency analysis methods and returns the results.
-
 Arguments:
-- n : is the array that contains the NN-inetrvals
+- n: the array that contains the NN-inetrvals
+
+Results:
+- vlf: the very low-frequency power
+- lf: the low-frequency power
+- hf: the high-frequency power
+- lf_hf_ratio: the lf/hf ratio
+- tp: the total power
 """
 function frequency(n::Array{Float64,1})
     ls=Frequency.lomb_scargle(n)
@@ -41,10 +50,19 @@ end # frequency
 """
     time_domain(n)
 
-This function calculates the time domain analysis methods and returns the results.
-
 Arguments:
-- n : is the array that contains the NN-inetrvals
+- n: the array that contains the NN-inetrvals
+
+Results:
+- mean: the mean value
+- sdnn: the standard deviation
+- rmssd: the root mean square of successive differences
+- sdsd: the standard deviation of successive differences
+- nn50: the number of successive NN intervals with an interval smaller than 50 ms
+- pnn50: the percentage of successive NN intervals with an interval smaller than 50 ms
+- nn20: the number of successive NN intervals with an interval smaller than 20 ms
+- pnn20: the percentage of successive NN intervals with an interval smaller than 20 ms
+- rRR: the percentage of relative RR intervals
 """
 function time_domain(n::Array{Float64,1})
     diff=TimeDomain.nn_diff(n)
@@ -58,10 +76,10 @@ end # time_domain
 """
     infile(file)
 
-This function reads a file (txt or csv) and saves the data in an array.
+This function reads the data from a txt or csv file.
 
 Arguments:
-- file : is the path of the input file
+- file: is the path of the input file
 
 """
 function infile(file::String)
@@ -71,11 +89,11 @@ end # infile
 """
     infile(record,annotator)
 
-This function reads a wfdb file and saves the data in an array.
+This function reads the data from a wbdb file.
 
 Arguments:
-- record : is the name of the record
-- annotator : is the annotator of the record
+- record: is the name of the record
+- annotator: is the annotator of the record
 """
 function infile(record::String,annotator::String)
     return Input.read_wfdb(record,annotator)
