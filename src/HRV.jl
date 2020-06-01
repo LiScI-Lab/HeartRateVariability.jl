@@ -51,7 +51,8 @@ function time_domain(n::Array{Float64,1})
     return (mean=TimeDomain.mean_nn(n),sdnn=TimeDomain.sdnn(n),
             rmssd=TimeDomain.rmssd(diff), sdsd=TimeDomain.sdsd(diff),
             nn50=TimeDomain.nn(diff,50), pnn50=TimeDomain.pnn(diff,50),
-            nn20=TimeDomain.nn(diff,20), pnn20=TimeDomain.pnn(diff,20))
+            nn20=TimeDomain.nn(diff,20), pnn20=TimeDomain.pnn(diff,20),
+            rRR=TimeDomain.rRR(n))
 end # time_domain
 
 """

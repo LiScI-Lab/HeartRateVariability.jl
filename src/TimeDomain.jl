@@ -1,6 +1,7 @@
 module TimeDomain
 
 import Statistics
+import Distances
 
 #=
 This function calculates the differences between the NN intervals
@@ -80,5 +81,19 @@ This function calculates the mean of the NN intervals
 function mean_nn(n)
     return Statistics.mean(n)
 end # mean_nn
+
+function rRR(n)
+    rr=[]
+    for i in 2:length(n)
+        r=(2*(n[i]-n[i-1])/(n[i]+n[i-1]))
+        push!(rr,r)
+    end
+    m=sum(rr)/length(rr)
+    d=[]
+    for i in 1:length(rr)-1
+        push!(d,Distances.euclidean([rr[i],rr[i+1]],[m,m]))
+    end
+    return Statistics.median(d)*100
+end # rRR
 
 end # module
