@@ -1,5 +1,3 @@
-## API
-
 # Data import
 
 The following functions are used to import data. They return the read data in an array.
