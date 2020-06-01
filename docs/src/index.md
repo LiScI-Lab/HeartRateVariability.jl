@@ -1,4 +1,6 @@
-# data import
+## API
+
+# Data import
 
 The following functions are used to import data. They return the read data in an array.
 
@@ -6,7 +8,7 @@ The following functions are used to import data. They return the read data in an
 infile
 ```
 
-# analysis
+# Analysis
 
 The following functions are used to analyze the data using time series, frequency or nonlinear methods. Each of them returns a NamedTuple containing the results of the analysis.
 
