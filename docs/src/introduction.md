@@ -1,41 +1,39 @@
 # Introduction
 
-# Analysing methods
+# Time-Domain Analysis
 
-## Time-Domain Analysis
+##### Mean
 
-### Mean
+##### SDNN
 
-### SDNN
+##### RMSSD
 
-### RMSSD
+##### SDSD
 
-### SDSD
+##### NN20/NN50
 
-### NN20/NN50
+##### pNN20/pNN50
 
-### pNN20/pNN50
+##### rRR
 
-### rRR
+# Frequency-Domain Analysis
 
-## Frequency-Domain Analysis
+##### VLF
 
-### VLF
+##### LF
 
-### LF
+##### HF
 
-### HF
+##### LF/HF
 
-### LF/HF
+##### Total Power
 
-### Total Power
+# Nonlinear Analysis
 
-## Nonlinear Analysis
+##### Approximate entropy
 
-### Approximate entropy
+##### Sample entropy
 
-### Sample entropy
+##### Hurst exponent
 
-### Hurst exponent
-
-### Rényi entropy
+##### Rényi entropy
