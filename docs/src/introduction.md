@@ -26,22 +26,26 @@ The time-domain analysis contains the following analysis methods:
 
 # Frequency-Domain Analysis
 
-##### VLF
+Frequency domain analysis uses a Lomb Scargle Transformation to determine the power spectral density of each frequency domain. The frequency bands are defined as follows:
 
-##### LF
+- VLF: very low frequency, from 0.003 to 0.04 Hz
 
-##### HF
+- LF: low frequency, from 0.04 to 0.15
 
-##### LF/HF
+- HF: high frequency, from 0.15 to 0.4
 
-##### Total Power
+- LF/HF: The ratio of LF and HF
+
+- Total Power: The sum of VLF, LF and HF
+
+[Read more](https://en.wikipedia.org/wiki/Heart_rate_variability#Frequency-domain_methods[36])
 
 # Nonlinear Analysis
 
-##### Approximate entropy
+- Approximate entropy:
 
-##### Sample entropy
+- Sample entropy:
 
-##### Hurst exponent
+- Hurst exponent:
 
-##### Rényi entropy
+- Rényi entropy:
