@@ -12,11 +12,13 @@ The time-domain analysis contains the following analysis methods:
 
 - SDSD: This is the standard deviation of the differences between successive NN intervals. [Read more](https://en.wikipedia.org/wiki/Heart_rate_variability#Time-domain_methods[36])
 
-- NN20/NN50: This is the number of pairs of successive NN intervals that differ by more than 20ms/50ms.[Read more](https://en.wikipedia.org/wiki/Heart_rate_variability#Time-domain_methods[36])
+- NN20/NN50: This is the number of pairs of successive NN intervals that differ by more than 20ms/50ms. [Read more](https://en.wikipedia.org/wiki/Heart_rate_variability#Time-domain_methods[36])
 
-- pNN20/pNN50: This is the percentage of pairs of successive NN intervals that differ by more than 20ms/50ms.[Read more](https://en.wikipedia.org/wiki/Heart_rate_variability#Time-domain_methods[36])
+- pNN20/pNN50: This is the percentage of pairs of successive NN intervals that differ by more than 20ms/50ms. [Read more](https://en.wikipedia.org/wiki/Heart_rate_variability#Time-domain_methods[36])
 
-- rRR: 
+- rRR: The relative RR intervals are calculated using the equation
+  for i=2...n
+  ``rr\underset{i}:=\frac{2*(RR\underset{i}-RR\underset{i-1})}{RR\underset{i}-RR\underset{i-1}}
 
 # Frequency-Domain Analysis
 
