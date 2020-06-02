@@ -20,7 +20,7 @@ The time-domain analysis contains the following analysis methods:
 
 """
 for i=2...n
-``rr\\underset{i}:=\\frac{2*(RR\\underset{i}-RR\\underset{i-1})}{RR\\underset{i}-RR\\underset{i-1}}``
+``rr\underset{i}:=\frac{2*(RR\underset{i}-RR\underset{i-1})}{RR\underset{i}-RR\underset{i-1}}``
 where n is the number of RR intervals.
 """
 
