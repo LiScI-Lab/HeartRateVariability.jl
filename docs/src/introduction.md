@@ -17,12 +17,9 @@ The time-domain analysis contains the following analysis methods:
 - pNN20/pNN50: This is the percentage of pairs of successive NN intervals that differ by more than 20ms/50ms. [Read more](https://en.wikipedia.org/wiki/Heart_rate_variability#Time-domain_methods[36])
 
 - rRR: The relative RR intervals are calculated using the equation
-
-"""
-for i=2...n
-``rr\underset{i}:=\frac{2*(RR\underset{i}-RR\underset{i-1})}{RR\underset{i}-RR\underset{i-1}}``
-where n is the number of RR intervals.
-"""
+  for i=2...n
+  ``rr\underset{i}:=\frac{2*(RR\underset{i}-RR\underset{i-1})}{RR\underset{i}-RR\underset{i-1}}``
+  where n is the number of RR intervals.
 
   The HRV is measured by the median of the euclidean distances of the relative RR intervals to the average of the relative RR intervals. [Read more](https://marcusvollmer.github.io/HRV/files/paper_method.pdf)
 
