@@ -8,7 +8,7 @@ makedocs(sitename = "HRV.jl",
                   #          "Quick Start" => "tutorials/firstTutorial.md"
                   #                   ],
                    "API" => "index.md"
-                  #  "License" => "LICENSE.md"
+                   "License" => "LICENSE.md"
                   ],
                   # Use clean URLs, unless built as a "local" build
           )
