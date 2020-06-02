@@ -2,7 +2,11 @@
 
 # Time-Domain Analysis
 
-##### Mean
+The time-domain analysis contains the following analysis methods:
+
+- Mean:
+
+This is the mean value of the RR intervals. It is calculated by summing all RR intervals and dividing by their number. [Read more](https://en.wikipedia.org/wiki/Mean#Arithmetic_mean_(AM))
 
 ##### SDNN
 
