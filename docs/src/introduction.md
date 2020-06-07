@@ -25,7 +25,7 @@ rr\underset{i}:=\frac{2*(RR\underset{i}-RR\underset{i-1})}{RR\underset{i}-RR\und
 ```
   where n is the number of RR intervals.
 
-"""
+
 Here's some inline maths: ``\\sqrt[n]{1 + x + x^2 + \\ldots}``.
 
 Here's an equation:
@@ -33,7 +33,7 @@ Here's an equation:
 ``\\frac{n!}{k!(n - k)!} = \\binom{n}{k}``
 
 This is the binomial coefficient.
-"""
+
 
   The HRV is measured by the median of the euclidean distances of the relative RR intervals to the average of the relative RR intervals. [Read more](https://marcusvollmer.github.io/HRV/files/paper_method.pdf)
 
