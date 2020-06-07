@@ -19,6 +19,7 @@ The time-domain analysis contains the following analysis methods:
 - rRR: The relative RR intervals are calculated using the equation
   for i=2...n
 ```math
+rr := \frac{RR}{RR}
 rr \underset{i} := \frac{2*(RR \underset{i}-RR \underset{i-1})}{RR \underset{i}-RR \underset{i-1}}
 ```
   where n is the number of RR intervals.
