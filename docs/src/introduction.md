@@ -25,6 +25,16 @@ rr\underset{i}:=\frac{2*(RR\underset{i}-RR\underset{i-1})}{RR\underset{i}-RR\und
 ```
   where n is the number of RR intervals.
 
+"""
+Here's some inline maths: ``\\sqrt[n]{1 + x + x^2 + \\ldots}``.
+
+Here's an equation:
+
+``\\frac{n!}{k!(n - k)!} = \\binom{n}{k}``
+
+This is the binomial coefficient.
+"""
+
   The HRV is measured by the median of the euclidean distances of the relative RR intervals to the average of the relative RR intervals. [Read more](https://marcusvollmer.github.io/HRV/files/paper_method.pdf)
 
 # Frequency-Domain Analysis
@@ -33,9 +43,9 @@ Frequency domain analysis uses a Lomb Scargle Transformation to determine the po
 
 - VLF: very low frequency, from 0.003 to 0.04 Hz
 
-- LF: low frequency, from 0.04 to 0.15
+- LF: low frequency, from 0.04 to 0.15 Hz
 
-- HF: high frequency, from 0.15 to 0.4
+- HF: high frequency, from 0.15 to 0.4 Hz
 
 - LF/HF: The ratio of LF and HF
 
