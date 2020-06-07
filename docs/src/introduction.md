@@ -18,7 +18,11 @@ The time-domain analysis contains the following analysis methods:
 
 - rRR: The relative RR intervals are calculated using the equation
   for i=2...n
-  ``rr\underset{i}:=\frac{2*(RR\underset{i}-RR\underset{i-1})}{RR\underset{i}-RR\underset{i-1}}``
+```math
+\begin{equation}
+rr\underset{i}:=\frac{2*(RR\underset{i}-RR\underset{i-1})}{RR\underset{i}-RR\underset{i-1}}
+\end{equation}
+```
   where n is the number of RR intervals.
 
   The HRV is measured by the median of the euclidean distances of the relative RR intervals to the average of the relative RR intervals. [Read more](https://marcusvollmer.github.io/HRV/files/paper_method.pdf)
