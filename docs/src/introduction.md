@@ -1,7 +1,3 @@
-h6 {
-    margin: 0;
-}
-
 # Introduction
 
 # Time-Domain Analysis
