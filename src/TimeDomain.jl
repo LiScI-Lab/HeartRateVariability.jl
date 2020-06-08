@@ -1,7 +1,6 @@
 module TimeDomain
 
 import Statistics
-import Distances
 
 #=
 This function calculates the differences between the NN intervals
@@ -91,7 +90,7 @@ function rRR(n)
     m=sum(rr)/length(rr)
     d=[]
     for i in 1:length(rr)-1
-        push!(d,Distances.euclidean([rr[i],rr[i+1]],[m,m]))
+        push!(d,sqrt((m-rr[i])^2+(m-rr[i+1])^2))
     end
     return Statistics.median(d)*100
 end # rRR

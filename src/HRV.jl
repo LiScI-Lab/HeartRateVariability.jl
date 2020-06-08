@@ -4,6 +4,11 @@ include("TimeDomain.jl")
 include("Input.jl")
 include("Frequency.jl")
 include("Nonlinear.jl")
+include("Geometric.jl")
+
+function geometric(n::Array{Float64,1},e::Number=50)
+    return (poincare=Geometric.poincare(n),recurrence=Geometric.recurrence(n,e))
+end
 
 """
     nonlinear(n,m=2,r=6)
