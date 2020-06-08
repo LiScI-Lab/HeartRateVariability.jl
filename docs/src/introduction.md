@@ -7,7 +7,7 @@ The time-domain analysis contains the following analysis methods:
 ###### Mean:
 This is the mean value of the RR intervals. It is calculated by summing all NN intervals and then dividing by their number. [Read more](https://en.wikipedia.org/wiki/Mean#Arithmetic_mean_(AM))
 
-
+&nbsp;
 ###### SDNN:
 This is the standard deviation of the NN intervals. [Read more](https://en.wikipedia.org/wiki/Heart_rate_variability#Time-domain_methods[36])
 
