@@ -41,7 +41,7 @@ Results:
 - vlf: the very low-frequency power
 - lf: the low-frequency power
 - hf: the high-frequency power
-- lf\_hf\_ratio: the lf/hf ratio
+- ’lf_hf_ratio’: the lf/hf ratio
 - tp: the total power
 """
 function frequency(n::Array{Float64,1})
