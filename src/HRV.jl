@@ -41,7 +41,7 @@ Results:
 - vlf: the very low-frequency power
 - lf: the low-frequency power
 - hf: the high-frequency power
-- ’lf_hf_ratio’: the lf/hf ratio
+- lfhf_ratio: the lf/hf ratio
 - tp: the total power
 """
 function frequency(n::Array{Float64,1})
@@ -50,7 +50,7 @@ function frequency(n::Array{Float64,1})
     lf=Frequency.get_power(ls.freq,ls.power,0.04,0.15)
     hf=Frequency.get_power(ls.freq,ls.power,0.15,0.4)
     tp=vlf+lf+hf
-    return (vlf=vlf, lf=lf, hf=hf, lf_hf_ratio=lf/hf, tp=tp)
+    return (vlf=vlf, lf=lf, hf=hf, lfhf_ratio=lf/hf, tp=tp)
 end # frequency
 
 """
