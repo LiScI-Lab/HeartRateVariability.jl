@@ -28,7 +28,7 @@ nl=HRV.nonlinear(n)
         @test fd.vlf≈1317.96 atol=0.01*fd.vlf
         @test fd.lf≈90.36 atol=0.01*fd.lf
         @test fd.hf≈176.05 atol=0.01*fd.hf
-        @test fd.lf_hf_ratio≈0.51 atol=0.01*fd.lf_hf_ratio
+        @test fd.lfhf_ratio≈0.51 atol=0.01*fd.lfhf_ratio
         @test fd.tp≈1584.35 atol=0.01*fd.tp
     end
 
