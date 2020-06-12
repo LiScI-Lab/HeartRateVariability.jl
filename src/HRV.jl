@@ -6,6 +6,7 @@ include("Frequency.jl")
 include("Nonlinear.jl")
 include("Geometric.jl")
 
+
 function geometric(n::Array{Float64,1},e::Number=50)
     return (poincare=Geometric.poincare(n),recurrence=Geometric.recurrence(n,e))
 end
@@ -40,7 +41,7 @@ Results:
 - vlf: the very low-frequency power
 - lf: the low-frequency power
 - hf: the high-frequency power
-- lf_hf_ratio: the lf/hf ratio
+- lf\_hf\_ratio: the lf/hf ratio
 - tp: the total power
 """
 function frequency(n::Array{Float64,1})
