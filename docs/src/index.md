@@ -16,4 +16,5 @@ The following functions are used to analyze the data using time series, frequenc
 time_domain
 frequency
 nonlinear
+geometric
 ```
