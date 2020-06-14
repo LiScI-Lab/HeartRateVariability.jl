@@ -19,7 +19,7 @@ Results:
 """
 function geometric(n::Array{Float64,1},e="mean")
     return (poincare=Geometric.poincare(n),recurrence=Geometric.recurrence(n,e))
-end
+end # geometric
 
 """
     nonlinear(n,m=2,r=6)
