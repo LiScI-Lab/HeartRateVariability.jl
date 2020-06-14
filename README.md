@@ -1,7 +1,7 @@
 # HRV
 
 ## Documentation
-[![](https://img.shields.io/badge/docs-dev-blue.svg)](https://LiScI-Lab.github.io/HRV.jl/dev)
+[![](https://img.shields.io/badge/docs-dev-blue.svg)](https://LiScI-Lab.github.io/HRV.jl/dev/introduction)
 
 ## Build status
 [![Build Status](https://travis-ci.org/LiScI-Lab/HRV.jl.svg?branch=master)](https://travis-ci.org/LiScI-Lab/HRV.jl)
