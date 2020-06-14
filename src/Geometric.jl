@@ -17,7 +17,7 @@ end # poincare
 function recurrence(n,e)
     if e=="mean"
         diff=[]
-        for i in 1:length(n)
+        for i in 1:length(n)-1
             push!(diff,abs(n[i+1]-n[i]))
         end
         e=sum(diff)/length(diff)
