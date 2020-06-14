@@ -14,7 +14,7 @@ Arguments:
 - e: the maximum distance between two intervals
 
 Results:
-- pincare: the Poincaré plot
+- poincare: the Poincaré plot
 - recurrence: the recurrence plot
 """
 function geometric(n::Array{Float64,1},e="mean")
