@@ -1,6 +1,5 @@
 ```@example 1
 using HRV # hide
-data = HRV.infile("e1034","atr")
 data = HRV.ifile("e1304.txt")
 ```
 ```@example 1
