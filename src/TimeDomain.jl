@@ -9,7 +9,7 @@ This function calculates the differences between the NN intervals
 =#
 function nn_diff(n)
     diff=[]
-    for i in 1:length(n)
+    for i in 1:length(n)-1
         push!(diff,abs(n[i+1]-n[i]))
     end
     return diff
