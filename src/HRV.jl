@@ -115,5 +115,5 @@ function infile(record::String,annotator::String)
     return Input.read_wfdb(record,annotator)
 end # infile
 
-export nonlinear, frequency, time_domain, infile
+export nonlinear, frequency, time_domain, infile, geometric
 end # module
