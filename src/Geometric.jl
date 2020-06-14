@@ -15,10 +15,17 @@ function poincare(n)
 end # poincare
 
 function recurrence(n,e)
+    if e=="mean"
+        diff=[]
+        for i in 1:length(n)
+            push!(diff,abs(n[i+1]-n[i]))
+        end
+        e=sum(diff)/length(diff)
+    end
     x=zeros(length(n),length(n))
     for i in 1:length(n)
         for j in i:length(n)
-            if sqrt((n[i]-n[j])^2)<=50
+            if sqrt((n[i]-n[j])^2)<=e
                 x[i,j]=1
                 x[j,i]=1
             end
