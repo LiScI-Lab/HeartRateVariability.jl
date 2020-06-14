@@ -7,6 +7,16 @@ The following functions are used to import data. They return the read data in an
 ```@docs
 infile
 ```
+<div class="panel panel-info">
+**Note**
+{: .panel-heading}
+<div class="panel-body">
+
+In order to use the infile function for wfdb files, the wfdb library from Pysionet is required. See [Installation](src/installation.md) for more information.
+
+</div>
+</div>
+
 
 # Analysis
 
