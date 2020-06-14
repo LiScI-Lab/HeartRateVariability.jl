@@ -8,8 +8,9 @@ The following functions are used to import data. They return the read data in an
 infile
 ```
 
+!!! note
 In order to use the infile function for wfdb files, the wfdb library from Pysionet is required. See [Installation](installation) for more information.
-{: .alert .alert-info}
+
 
 
 # Analysis
