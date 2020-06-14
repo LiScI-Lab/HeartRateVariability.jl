@@ -6,8 +6,18 @@ include("Frequency.jl")
 include("Nonlinear.jl")
 include("Geometric.jl")
 
+"""
+    geometric(n,e="mean")
 
-function geometric(n::Array{Float64,1},e::Number=50)
+Arguments:
+- n: the array that contains the NN-inetrvals
+- e: the maximum distance between two intervals
+
+Results:
+- pincare: the Poincaré plot
+- recurrence: the recurrence plot
+"""
+function geometric(n::Array{Float64,1},e="mean")
     return (poincare=Geometric.poincare(n),recurrence=Geometric.recurrence(n,e))
 end
 
