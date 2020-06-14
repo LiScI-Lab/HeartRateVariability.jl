@@ -5,6 +5,7 @@ n=HRV.infile("e1304.txt")
 td=HRV.time_domain(n)
 fd=HRV.frequency(n)
 nl=HRV.nonlinear(n)
+g=HRV.geometric(n)
 
 @testset "HRV.jl" begin
 
@@ -42,5 +43,9 @@ nl=HRV.nonlinear(n)
 
         #testing if get_rs from module Nonlinear returns 0 when S or R is 0
         @test HRV.Nonlinear.get_rs(ones(100))==0
+
+    @testset "HRV.geometric" begin
+        @test g.poincare!=nothing
+        @test g.recurrence!=nothing
     end
 end
