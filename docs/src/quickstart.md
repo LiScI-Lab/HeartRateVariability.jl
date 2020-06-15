@@ -20,25 +20,25 @@ To analyze the read-in data, the array with the data is passed to the respective
 ### Time-Domain Analysis
 
 ```@example 1
-td=HRV.time_domain(data)
+td = HRV.time_domain(data)
 ```
 
 ### Frequency-Domain Analysis
 
 ```@example 1
-fd=HRV.frequency(data)
+fd = HRV.frequency(data)
 ```
 
 ### Nonlinear Analysis
 
 ```@example 1
-nl=HRV.nonlinear(data)
+nl = HRV.nonlinear(data)
 ```
 
 ### Geometric Analysis
 
 ```@example 1
-g=HRV.geometric(data)
+g = HRV.geometric(data)
 ```
 
 The different results in the NamedTuple can be output individually by calling the result name.
