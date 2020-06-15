@@ -1,7 +1,6 @@
 ```@example 1
 using HRV #hide
-data = HRV.infile("e1304.txt")
-data = HRV.infile("test/e1304.txt") #hide
+data = HRV.infile("e1304","atr")
 ```
 ```@example 1
 td=HRV.time_domain(data)
