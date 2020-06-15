@@ -14,3 +14,7 @@ nl=HRV.nonlinear(data)
 ```@example 1
 g=HRV.geometric(data)
 ```
+```@example 1
+g.poincare
+g.recurrence
+```
