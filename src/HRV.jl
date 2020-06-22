@@ -11,7 +11,7 @@ include("Geometric.jl")
 
 Arguments:
 - n: the array that contains the NN-inetrvals
-- e: the maximum distance between two intervals, default="mean" (the mean value of the succsessive differences)
+- e: the maximum distance between two intervals, default="mean" (the mean value of the succsessive differences), has to be "mean" or a number
 
 Results:
 - poincare: the Poincaré plot
@@ -35,7 +35,7 @@ Arguments:
 Results:
 - apen: the approximate entropy
 - sampen: the sample entropy
-- hurst: the hurst exponent
+- hurst: the hurst exponent (only valid if the length of n is >= 100)
 - renyi0, renyi1, renyi2: the Rényi entropy of order 0,1 and 2
 """
 function nonlinear(n::Array{Float64,1},m::Int64=2,r::Number=6)
