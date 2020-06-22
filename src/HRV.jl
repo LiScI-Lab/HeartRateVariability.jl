@@ -11,13 +11,16 @@ include("Geometric.jl")
 
 Arguments:
 - n: the array that contains the NN-inetrvals
-- e: the maximum distance between two intervals
+- e: the maximum distance between two intervals, default="mean" (the mean value of the succsessive differences)
 
 Results:
 - poincare: the Poincaré plot
 - recurrence: the recurrence plot
 """
 function geometric(n::Array{Float64,1},e="mean")
+    if (e!="mean" && !isa(e,Number))
+           error("e has to be a numerical value or 'mean'")
+       end
     return (poincare=Geometric.poincare(n),recurrence=Geometric.recurrence(n,e))
 end # geometric
 
@@ -36,6 +39,9 @@ Results:
 - renyi0, renyi1, renyi2: the Rényi entropy of order 0,1 and 2
 """
 function nonlinear(n::Array{Float64,1},m::Int64=2,r::Number=6)
+    if length(n)<100
+        println("WARNING: To obtain a valid value for the hurst coefficient, the length of the data series must be greater than or equal to 100.")
+    end
     return (apen=Nonlinear.apen(n,m,r), sampen=Nonlinear.sampen(n,m,r),
             hurst=Nonlinear.hurst(n), renyi0=Nonlinear.renyi(n,0),
             renyi1=Nonlinear.renyi(n,1), renyi2=Nonlinear.renyi(n,2))
