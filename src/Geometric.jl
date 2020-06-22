@@ -3,6 +3,11 @@ module Geometric
 import Plots
 import Images
 
+#=
+This function creates a Poincaré plot
+:param n: is the array that contains the NN-inetrvals
+:return: a plot object
+=#
 function poincare(n)
     x=[]
     y=[]
@@ -10,10 +15,16 @@ function poincare(n)
         push!(x,n[i])
         push!(y,n[i+1])
     end
-    p=Plots.scatter(x,y);
+    p=Plots.scatter(x,y,xlabel="RRn",ylabel="RRn+1",legend=false);
     return p;
 end # poincare
 
+#=
+This function creates a recurrence plot
+:param n: is the array that contains the NN-inetrvals
+:param e: the maximum distance between two intervals, default="mean" == the mean value of succsessive differences
+:return: a plot object
+=#
 function recurrence(n,e)
     if e=="mean"
         diff=[]
