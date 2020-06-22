@@ -79,6 +79,11 @@ function mean_nn(n)
     return Statistics.mean(n)
 end # mean_nn
 
+#=
+This function calculates the relative RR
+:param n: is the array that contains the NN-inetrvals
+:return: the relative RR
+=#
 function rRR(n)
     rr=[]
     for i in 2:length(n)
