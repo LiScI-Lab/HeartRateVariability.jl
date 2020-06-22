@@ -40,7 +40,7 @@ Results:
 """
 function nonlinear(n::Array{Float64,1},m::Int64=2,r::Number=6)
     if length(n)<100
-        println("WARNING: To obtain a valid value for the hurst coefficient, the length of the data series must be greater than or equal to 100.")
+        @warn("To obtain a valid value for the hurst coefficient, the length of the data series must be greater than or equal to 100.")
     end
     return (apen=Nonlinear.apen(n,m,r), sampen=Nonlinear.sampen(n,m,r),
             hurst=Nonlinear.hurst(n), renyi0=Nonlinear.renyi(n,0),
