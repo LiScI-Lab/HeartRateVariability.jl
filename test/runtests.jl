@@ -43,10 +43,14 @@ g=HRV.geometric(n)
 
         #testing if get_rs from module Nonlinear returns 0 when S or R is 0
         @test HRV.Nonlinear.get_rs(ones(100))==0
+
+        #testing if warning is thwown
+        @test_logs (:warn,"To obtain a valid value for the hurst coefficient, the length of the data series must be greater than or equal to 100.") HRV.nonlinear([1.0,2.0,1.0,2.0,1.0,2.0,1.0,2.0,1.0,2.0])
     end
 
     @testset "HRV.geometric" begin
         @test g.poincare!=nothing
         @test g.recurrence!=nothing
+        @test_throws ErrorException HRV.geometric(n,"error")
     end
 end
