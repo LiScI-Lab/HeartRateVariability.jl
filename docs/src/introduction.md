@@ -54,10 +54,23 @@ Frequency domain analysis uses a Lomb Scargle Transformation to determine the po
 
 # Nonlinear Analysis
 
-- **Approximate entropy:**
+###### Approximate entropy
 
-- **Sample entropy:**
+This is a technique for quantifying the degree of regularity and unpredictability of the RR intervals. [Read more](https://en.wikipedia.org/wiki/Approximate_entropy)
 
-- **Hurst exponent:**
+###### Sample entropy
+This is a modification of the approximate entropy that is used to assess the complexity of physiological time series signals. [Read more](https://en.wikipedia.org/wiki/Sample_entropy)
 
-- **Rényi entropy:**
+###### Hurst exponent
+The Hurst exponent is used to measure the long-term memory of time series. [Read more](https://en.wikipedia.org/wiki/Hurst_exponent)
+
+###### Rényi entropy
+The renyi entropy is a measure of diversity and forms the basis of the concept of generalized dimensions. [Read more](https://en.wikipedia.org/wiki/R%C3%A9nyi_entropy)
+
+# Geometric Analysis
+
+###### Poincaré plot
+This plot is used to quantify self-similarity in processes. [Read more](https://en.wikipedia.org/wiki/Poincar%C3%A9_plot)
+
+###### Recurrence plot
+This plot is used to visualize the periodic nature of a trajectory through a phase space. [Read more](https://en.wikipedia.org/wiki/Recurrence_plot)
