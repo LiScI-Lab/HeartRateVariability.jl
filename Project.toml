@@ -12,6 +12,7 @@ StatsBase = "2913bbd2-ae8a-5f71-8c99-4fb6c76f3a91"
 Trapz = "592b5752-818d-11e9-1e9a-2b8ca4a44cd1"
 
 [compat]
+Plots = "1.4"
 julia = "1"
 
 [extras]
