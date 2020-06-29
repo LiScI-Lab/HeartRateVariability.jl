@@ -3,7 +3,7 @@
 ## Install Package
 
     using Pkg
-    Pkg.add(PackageSpec(url="https://github.com/LiScI-Lab/HRV.jl"))
+    Pkg.add(PackageSpec(url="https://github.com/LiScI-Lab/HeartRateVariability.jl"))
 
 ## Using wfdb files
 

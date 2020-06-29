@@ -1,19 +1,19 @@
-using HRV
+using HeartRateVariability
 using Test
 
-n=HRV.infile("e1304.txt")
-td=HRV.time_domain(n)
-fd=HRV.frequency(n)
-nl=HRV.nonlinear(n)
-g=HRV.geometric(n)
+n=HeartRateVariability.infile("e1304.txt")
+td=HeartRateVariability.time_domain(n)
+fd=HeartRateVariability.frequency(n)
+nl=HeartRateVariability.nonlinear(n)
+g=HeartRateVariability.geometric(n)
 
-@testset "HRV.jl" begin
+@testset "HeartRateVariability.jl" begin
 
-    @testset "HRV.infile" begin
-        @test HRV.infile("e1304","atr")==n
+    @testset "HeartRateVariability.infile" begin
+        @test HeartRateVariability.infile("e1304","atr")==n
     end
 
-    @testset "HRV.time_domain" begin
+    @testset "HeartRateVariability.time_domain" begin
         @test td.mean≈917.24 atol=0.1
         @test td.sdnn≈137.19 atol=0.1
         @test td.rmssd≈27.85 atol=0.1
@@ -25,7 +25,7 @@ g=HRV.geometric(n)
         @test td.rRR≈2.67 atol=0.1
     end
 
-    @testset "HRV.frequency" begin
+    @testset "HeartRateVariability.frequency" begin
         @test fd.vlf≈1317.96 atol=0.01*fd.vlf
         @test fd.lf≈90.36 atol=0.01*fd.lf
         @test fd.hf≈176.05 atol=0.01*fd.hf
@@ -33,7 +33,7 @@ g=HRV.geometric(n)
         @test fd.tp≈1584.35 atol=0.01*fd.tp
     end
 
-    @testset "HRV.nonlinear" begin
+    @testset "HeartRateVariability.nonlinear" begin
         @test nl.apen≈2.16 atol=0.1
         @test nl.sampen≈2.16 atol=0.1
         @test nl.hurst≈0.37 atol=0.1
@@ -42,15 +42,15 @@ g=HRV.geometric(n)
         @test nl.renyi2≈-6.84 atol=0.1
 
         #testing if get_rs from module Nonlinear returns 0 when S or R is 0
-        @test HRV.Nonlinear.get_rs(ones(100))==0
+        @test HeartRateVariability.Nonlinear.get_rs(ones(100))==0
 
         #testing if warning is thwown
-        @test_logs (:warn,"To obtain a valid value for the hurst coefficient, the length of the data series must be greater than or equal to 100.") HRV.nonlinear([1.0,2.0,1.0,2.0,1.0,2.0,1.0,2.0,1.0,2.0])
+        @test_logs (:warn,"To obtain a valid value for the hurst coefficient, the length of the data series must be greater than or equal to 100.") HeartRateVariability.nonlinear([1.0,2.0,1.0,2.0,1.0,2.0,1.0,2.0,1.0,2.0])
     end
 
-    @testset "HRV.geometric" begin
+    @testset "HeartRateVariability.geometric" begin
         @test g.poincare!=nothing
         @test g.recurrence!=nothing
-        @test_throws ErrorException HRV.geometric(n,"error")
+        @test_throws ErrorException HeartRateVariability.geometric(n,"error")
     end
 end

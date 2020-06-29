@@ -16,6 +16,6 @@ jobs:
         - julia --project=docs/ -e 'using Pkg; Pkg.develop(PackageSpec(path=pwd()));
                                                Pkg.instantiate()'
         - julia --project=docs/ docs/make.jl
-        - julia -e 'using Pkg; Pkg.test("HRV", coverage=true)'
+        - julia -e 'using Pkg; Pkg.test("HeartRateVariability", coverage=true)'
       after_success:
         - julia -e 'using Pkg; Pkg.add("Coverage"); using Coverage; Codecov.submit(process_folder())'

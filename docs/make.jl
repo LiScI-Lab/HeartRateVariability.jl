@@ -1,6 +1,6 @@
-using Documenter, HRV
+using Documenter, HeartRateVariability
 
-makedocs(sitename = "HRV.jl",
+makedocs(sitename = "HeartRateVariability.jl",
          authors = "Jasmin Walter",
          pages = [
                   "Introduction" => "introduction.md",
@@ -12,5 +12,5 @@ makedocs(sitename = "HRV.jl",
           )
 
 deploydocs(
-    repo = "github.com/LiScI-Lab/HRV.jl.git",
+    repo = "github.com/LiScI-Lab/HeartRateVariability.jl.git",
 )

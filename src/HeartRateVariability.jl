@@ -1,4 +1,4 @@
-module HRV
+module HeartRateVariability
 
 include("TimeDomain.jl")
 include("Input.jl")
