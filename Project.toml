@@ -1,7 +1,7 @@
 name = "HRV"
 uuid = "0047d930-76bf-11ea-1377-bb3cda807e9f"
 authors = ["Jasmin Walter <jasmin.walter@mni.thm.de>"]
-version = "0.1.0"
+version = "1.0"
 
 [deps]
 Images = "916415d5-f1e6-5110-898d-aaa5f9f070e0"
